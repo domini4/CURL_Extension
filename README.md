@@ -1,3 +1,11 @@
+Name: James Dominic
+
+Paper title: CURL: Contrastive Unsupervised Representations for Reinforcement Learning.
+
+Improvements made:
+1. Impliment episodic memory.
+2. Add dynamic exploraion.
+
 CURL Rainbow
 =======
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
@@ -9,11 +17,30 @@ Reinforcement Learning](https://arxiv.org/abs/2004.04136) coupled with the [Data
 games. The code by default uses the 100k timesteps benchmark and has not been
 tested for any other setting.
 
-Run the following command (or `bash run_curl.sh`) with the game as an argument:
+Episodic memory implimentation is based on [Episodic Memory Deep Q-Networks](https://arxiv.org/pdf/1805.07603.pdf)
+
+To install all dependencies, use the 'enviro_curl.yml' file to create a conda environment. To do so use the below command. Make sure to navigate into the project folder before running this command.
 
 ```
-python3 main.py --game ms_pacman
+conda env create -f environment.yml
 ```
 
-To install all dependencies, run `bash install.sh`.
-"# CURL_Extension" 
+Now activate conda environments using below comment.
+
+```
+conda activate curl
+```
+
+Install torchvision dependency. This was triggering an error while packaging with the yml file.
+
+```
+conda install -c pytorch torchvision
+```
+
+Run the following command with the game as an argument:
+
+CartPole-v1
+```
+python main.py --T-max 100000 --game CartPole-v1 --V-max 200 --V-min -200 --max-episode-length 500
+```
+ 
