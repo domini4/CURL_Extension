@@ -37,6 +37,18 @@ Install torchvision dependency. This was triggering an error while packaging wit
 conda install -c pytorch torchvision
 ```
 
+Install atari_py older version.
+
+```
+conda install -c conda-forge gym-atari
+```
+
+Instal sklearn dependency.
+
+```
+conda install -c conda-forge sklearn-contrib-lightning
+```
+
 Run the following command with the game as an argument:
 
 CartPole-v1
