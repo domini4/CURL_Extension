@@ -26,9 +26,9 @@ from test import test
 
 from lru_knn import LRU_KNN
 
-from ale_py import ALEInterface
+#from ale_py import ALEInterface
 
-ale = ALEInterface()
+#ale = ALEInterface()
 
 
 print('atari choices', atari_py.list_games())
