@@ -74,6 +74,8 @@ parser.add_argument('--enable-cudnn', action='store_true', help='Enable cuDNN (f
 parser.add_argument('--checkpoint-interval', default=0, help='How often to checkpoint the model, defaults to 0 (never checkpoint)')
 parser.add_argument('--memory', help='Path to save/load the memory from')
 parser.add_argument('--disable-bzip-memory', action='store_true', help='Don\'t zip the memory file. Not recommended (zipping is a bit slower and much, much smaller)')
+parser.add_argument('--eps-start', type=int, default=0.001, metavar='e', help='starting eps value')
+
 
 # Setup
 args = parser.parse_args()
@@ -155,7 +157,7 @@ while T < args.evaluation_size:
   T += 1
   
 # Define epsilon greedy
-eps = 1.0   # starts with maximum exploration
+eps = args.eps_start   # starts with maximum exploration
 decay = 2 * eps/args.T_max   # decay factor. Eexloration reduces over time.
 
 # EMDQN definition

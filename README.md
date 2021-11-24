@@ -49,10 +49,16 @@ Instal sklearn dependency.
 conda install -c conda-forge sklearn-contrib-lightning
 ```
 
-Run the following command with the game as an argument:
+The commands to run each game is provded in the run_curl.sh file.
 
-CartPole-v1
+Example EMCURL run command
+
 ```
-python main.py --T-max 100000 --game CartPole-v1 --V-max 200 --V-min -200 --max-episode-length 500
+python main.py --game alien --eps-start 1
+``` 
+
+Example EMCURL-EPS run command
+
 ```
- 
+python main.py --game alien
+```

@@ -9,7 +9,6 @@ python main.py --game breakout
 python main.py --game chopper_command
 python main.py --game crazy_climber
 python main.py --game demon_attack
-python main.py --game freeway
 python main.py --game frostbite
 python main.py --game gopher
 python main.py --game hero
@@ -19,7 +18,6 @@ python main.py --game krull
 python main.py --game kung_fu_master
 python main.py --game ms_pacman
 python main.py --game pong
-python main.py --game private_eye
 python main.py --game qbert
 python main.py --game road_runner
 python main.py --game seaquest
