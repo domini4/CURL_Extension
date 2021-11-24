@@ -12,12 +12,14 @@ CURL Rainbow
 
 **Status**: Archive (code is provided as-is, no updates expected)
 
-This is an implementation of [CURL: Contrastive Unsupervised Representations for
+Implementation of [CURL: Contrastive Unsupervised Representations for
 Reinforcement Learning](https://arxiv.org/abs/2004.04136) coupled with the [Data Efficient Rainbow method](https://arxiv.org/abs/1906.05243) for Atari
-games. The code by default uses the 100k timesteps benchmark and has not been
-tested for any other setting.
+games.
 
 Episodic memory implimentation is based on [Episodic Memory Deep Q-Networks](https://arxiv.org/pdf/1805.07603.pdf)
+
+The code by default uses the 100k timesteps benchmark and has not been
+tested for any other setting.
 
 To install all dependencies, use the 'enviro_curl.yml' file to create a conda environment. To do so use the below command. Make sure to navigate into the project folder before running this command.
 
